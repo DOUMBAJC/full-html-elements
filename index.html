@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Une page web complète avec les balises HTML essentielles"
+    />
+    <meta name="author" content="Votre Nom" />
+    <meta
+      name="keywords"
+      content="HTML, web design, développement web, tutoriel"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#4285f4" />
+    <link rel="icon" type="image/png" href="images/image-1.jpg" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <title>Page Web Complète en HTML</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+    <header role="banner">
+      <h1>Titre Principal</h1>
+      <nav role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Accueil</a></li>
+          <li><a href="/apropos/apropos.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main role="main">
+      <!-- Section accueil avec microdata -->
+      <section id="accueil" aria-labelledby="titre-accueil">
+        <h2 id="titre-accueil" itemprop="headline">Section Accueil</h2>
+        <article>
+          <h3>Article 1</h3>
+          <p itemprop="text">
+            Ceci est un paragraphe de texte. Il peut contenir du texte
+            <strong>en gras</strong>, en <em>italique</em> et du
+            <mark>texte surligné</mark>. Voici un
+            <kbd>raccourci clavier</kbd> et une
+            <abbr title="HyperText Markup Language">HTML</abbr>.
+          </p>
+          <details>
+            <summary>Plus d'informations</summary>
+            <p>Contenu supplémentaire caché par défaut.</p>
+          </details>
+        </article>
+      </section>
+
+      <!-- Section galerie avec optimisations -->
+      <section id="galerie" aria-labelledby="titre-galerie">
+        <h2 id="titre-galerie">Notre Galerie</h2>
+        <div class="gallery">
+          <figure>
+            <picture>
+              <source srcset="/images/image-1.jpg" type="image/jpg" />
+              <img
+                src="/images/image-1.jpg"
+                width="300"
+                height="300"
+                alt="Image exemple 1"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <figcaption>Image exemple 1</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/image-2.jpg"
+              width="300"
+              height="300"
+              alt="Image exemple 2"
+              loading="lazy"
+            />
+            <figcaption>Image exemple 2</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="/images/image-3.jpg"
+              width="300"
+              height="300"
+              alt="Image exemple 3"
+              loading="lazy"
+            />
+            <figcaption>Image exemple 3</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Section formulaire de contact -->
+      <section id="contact" aria-labelledby="titre-contact">
+        <h2 id="titre-contact">Contact</h2>
+        <form action="#" method="post" role="form" autocomplete="on">
+          <fieldset>
+            <legend>Formulaire de contact</legend>
+
+            <div class="form-group">
+              <label for="civilite">Civilité :</label>
+              <select value="Choisissez une option"  id="civilite" name="civilite" required>
+                <option selected disabled>Choisissez un element</option>
+                <option value="m">M.</option>
+                <option value="mme">Mme</option>
+                <option value="mlle">Mlle</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="nom">Nom :</label>
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                aria-required="true"
+                autocomplete="name"
+                pattern="[A-Za-z\s]+"
+                minlength="2"
+                maxlength="50"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email :</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                placeholder="exemple@domaine.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="tel">Téléphone :</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                autocomplete="tel"
+                pattern="[0-9]{9}"
+                maxlength="9"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date de contact souhaitée :</label>
+              <input type="date" id="date" name="date" min="2024-02-01"  max="2030-01-01"/>
+            </div>
+
+            <div class="form-group">
+              <label for="heure">Heure de contact souhaitée :</label>
+              <input
+                type="time"
+                id="heure"
+                name="heure"
+                min="09:00"
+                max="18:00"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Âge :</label>
+              <input type="number" id="age" name="age" min="18" max="120" />
+            </div>
+
+            <div class="form-group">
+              <label for="site">Site web :</label>
+              <input
+                type="url"
+                id="site"
+                name="site"
+                placeholder="https://www.exemple.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="fichier">Pièce jointe :</label>
+              <input
+                type="file"
+                id="fichier"
+                name="fichier"
+                accept=".pdf,.doc,.docx"
+                multiple
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="satisfaction">Niveau de satisfaction :</label>
+              <input
+                type="range"
+                id="satisfaction"
+                name="satisfaction"
+                min="0"
+                max="10"
+                step="1"
+                value="5"
+              />
+            </div>
+
+            <fieldset>
+              <legend>Services d'intérêt :</legend>
+              <div>
+                <input
+                  type="checkbox"
+                  id="service1"
+                  name="services"
+                  value="conseil"
+                />
+                <label for="service1">Conseil</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="service2"
+                  name="services"
+                  value="formation"
+                />
+                <label for="service2">Formation</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="service3"
+                  name="services"
+                  value="support"
+                />
+                <label for="service3">Support</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Comment nous avez-vous connu ?</legend>
+              <div>
+                <input type="radio" id="source1" name="source" value="web" />
+                <label for="source1">Internet</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="source2"
+                  name="source"
+                  value="recommandation"
+                />
+                <label for="source2">Recommandation</label>
+              </div>
+              <div>
+                <input type="radio" id="source3" name="source" value="autre" />
+                <label for="source3">Autre</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="message">Message :</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                aria-required="true"
+                spellcheck="true"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="couleur">Couleur préférée :</label>
+              <input type="color" id="couleur" name="couleur" />
+            </div>
+
+            <div class="form-group">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter"
+                >Je souhaite m'abonner à la newsletter</label
+              >
+            </div>
+
+            <output name="result" for="nom email">Message de validation</output>
+
+            <div class="form-actions">
+              <!-- <button type="submit">Envoyer</button>
+              <button type="reset">Réinitialiser</button> -->
+              <input type="submit" value="Envoyer">
+              <input type="reset" value="Réinitialiser">
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer role="contentinfo">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Coordonnées</h3>
+          <address>
+            <p>514 Rue Bini</p>
+            <p>75000 Ngoundere, Cameroun</p>
+            <p>Tél: <a href="tel:+33123456789">+237 6 98 97 18 19</a></p>
+            <p>
+              Email:
+              <a href="mailto:contact@example.com">calvinopro007@gmail.com</a>
+            </p>
+          </address>
+        </div>
+        <div class="footer-section">
+          <h3>Suivez-nous</h3>
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Suivez-nous sur Facebook"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="Suivez-nous sur Twitter"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                aria-label="Suivez-nous sur LinkedIn"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                aria-label="Suivez-nous sur Instagram"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Newsletter</h3>
+          <form action="#" method="post" class="newsletter-form">
+            <label for="newsletter-email"
+              >Inscrivez-vous à notre newsletter :</label
+            >
+            <input
+              type="email"
+              id="newsletter-email"
+              name="newsletter-email"
+              required
+            />
+            <button type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <time datetime="2025">2025</time> Votre Entreprise. Tous droits
+          réservés.
+        </p>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+            <li>
+              <a href="politique-confidentialite.html"
+                >Politique de confidentialité</a
+              >
+            </li>
+            <li><a href="plan-site.html">Plan du site</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

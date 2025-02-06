@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-nous">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1>Contactez-nous</h1>
+        <nav>
+            <ul>
+                <li><a href="/apropos/index.html">Accueil</a></li>
+                <li><a href="/apropos/apropos.html">À propos</a></li>
+                <li><a href="/apropos/services.html">Services</a></li>
+                <li><a href="/apropos/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulaire de Contact</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Vos informations</legend>
+                    <div>
+                        <label for="nom">Nom complet :</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="telephone">Téléphone :</label>
+                        <input type="tel" id="telephone" name="telephone">
+                    </div>
+                    <div>
+                        <label for="sujet">Sujet :</label>
+                        <select id="sujet" name="sujet">
+                            <option value="">Choisissez un sujet</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="support">Support technique</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                        <button type="reset">Réinitialiser</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section>
+            <h2>Nos Coordonnées</h2>
+            <address>
+                <p>514 Rue Bini</p>
+                <p>75000 Ngoundere, Cameroun</p>
+                <p>Tél: <a href="tel:+33123456789">+237 6 98 97 18 19</a></p>
+                <p>
+                  Email:
+                  <a href="mailto:contact@example.com">calvinopro007@gmail.com</a>
+                </p>
+              </address>
+        </section>
+
+        <section>
+            <h2>Horaires d'ouverture</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Jour</th>
+                        <th>Horaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lundi - Vendredi</td>
+                        <td>9h00 - 18h00</td>
+                    </tr>
+                    <tr>
+                        <td>Samedi</td>
+                        <td>10h00 - 16h00</td>
+                    </tr>
+                    <tr>
+                        <td>Dimanche</td>
+                        <td>Fermé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Tous droits réservés</p>
+        <address>
+            Contact : <a href="mailto:calvinopro007@gmail.com">calvinopro007@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
